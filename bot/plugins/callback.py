@@ -81,7 +81,7 @@ async def cb_navg(bot, update: CallbackQuery):
 
     if ((index_val + 1 )== max_pages) or ((index_val + 1) == len(results)): # Max Pages
         temp_results.append([
-            InlineKeyboardButton("⏪ Back", callback_data=f"navigate({index_val}|back|{query})")
+            InlineKeyboardButton("‹‹ Back", callback_data=f"navigate({index_val}|back|{query})")
         ])
 
     elif int(index_val) == 0:
@@ -89,8 +89,8 @@ async def cb_navg(bot, update: CallbackQuery):
 
     else:
         temp_results.append([
-            InlineKeyboardButton("⏪ Back", callback_data=f"navigate({index_val}|back|{query})"),
-            InlineKeyboardButton("Next ⏩", callback_data=f"navigate({index_val}|next|{query})")
+            InlineKeyboardButton("‹‹ Back", callback_data=f"navigate({index_val}|back|{query})"),
+            InlineKeyboardButton("Next ››", callback_data=f"navigate({index_val}|next|{query})")
         ])
 
     if not int(index_val) == 0:    
@@ -142,7 +142,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<i>Found</i> <code>{leng}</code> <i>Results For Your Query:</i> <code>{query}</code>"
+    text=f"<i>Found</i> <code>{leng}</code> <i>Results For Your rEQUEST:</i> <code>{query}</code>"
         
     try:
         await update.message.edit(
@@ -332,7 +332,7 @@ async def cb_channel_list(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "🔙 Back", callback_data="settings"
+                    "‹‹ Back", callback_data="settings"
                 ),
             
             InlineKeyboardButton
@@ -545,7 +545,7 @@ async def cb_connect(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "🔙 Back", callback_data=f"channel_list({chat_id})"
+                        "‹‹ Back", callback_data=f"channel_list({chat_id})"
                     )
             ]
     )
@@ -617,7 +617,7 @@ async def cb_disconnect(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "🔙 Back", callback_data=f"channel_list({chat_id})"
+                        "‹‹ Back", callback_data=f"channel_list({chat_id})"
                     )
             ]
     )
@@ -664,7 +664,7 @@ async def cb_channel_delete(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "🔙 Back", callback_data=f"channel_list({chat_id})"
+                    "‹‹ Back", callback_data=f"channel_list({chat_id})"
                 ),
                 
             InlineKeyboardButton
@@ -1601,14 +1601,14 @@ async def cb_about(bot, update: CallbackQuery):
     text=f"<i><u>Bot's Status</u></i>\n"
     text+=f"\n<b><i>Bot's Uptime:</i></b> <code>{time_formatter(time.time() - start_uptime)}</code>\n"
     text+=f"\n<b><i>Bot Funtion:</i></b> <i>Auto Filter Files</i>\n"
-    text+=f"""\n<b><i>Bot Support:</i></b> <a href="https://t.me/CrazyBotszGrp">@CrazyBotszGrp</a>\n"""
-    text+="""\n<b><i>Source Code:</i></b> <a href="https://github.com/CrazyBotsz/Adv-Filter-Bot-V2">Source</a>"""
+    text+=f"""\n<b><i>Bot Support:</i></b> <a href="https://t.me/FHKL_Team">𝐅𝐇𝐊𝐋-𝐓𝐞𝐚𝐦</a>\n"""
+    text+="""\n<b><i>Source Code:</i></b> <a href="https://t.me/+SuKq6KMnVa4yZTJl">Source</a>"""
 
     buttons = [
         [
             InlineKeyboardButton
                 (
-                    "My Dev ⚡", url="https://t.me/AlbertEinstein_TG"
+                    "Clᴀʍ Rᴏᴄᴋy⚡", url="https://t.me/clamrocky1947"
                 ),
                 
             InlineKeyboardButton
@@ -1639,10 +1639,10 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/AlbertEinstein_TG'),
-            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Filter-Bot-V2')
+            InlineKeyboardButton('Clᴀʍ Rᴏᴄᴋy', url='https://t.me/clamrocky1947'),
+            InlineKeyboardButton('Source Code 🧾', url ='https://t.me/+SuKq6KMnVa4yZTJl')
         ],[
-            InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+            InlineKeyboardButton('𝐅𝐇𝐊𝐋-𝐓𝐞𝐚𝐦 🛠', url='https://t.me/FHKL-Team')
         ],[
             InlineKeyboardButton('Help ⚙', callback_data="help")
         ]]
