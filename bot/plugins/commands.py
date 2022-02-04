@@ -23,7 +23,7 @@ async def start(bot, update):
         if (file_id or file_type) == None:
             return
         
-        caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
+        caption = file_caption if file_caption != ("Powered By : @Filmy_hangama" or None) else ("<code>" + file_name + "</code>")
         try:
             await update.reply_cached_media(
                 file_id,
@@ -35,7 +35,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Developers', url="https://t.me/CrazyBotsz"
+                                    '𝐅𝐇𝐊𝐋-𝐓𝐞𝐚𝐦', url="https://t.me/FHKL_Team"
                                 )
                         ]
                     ]
@@ -47,10 +47,10 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
-        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
+        InlineKeyboardButton('𝐅𝐇𝐊𝐋-𝐓𝐞𝐚𝐦', url='https://t.me/FHKL_Team'),
+        InlineKeyboardButton('Source Code 🧾', url ='https://t.me/+SuKq6KMnVa4yZTJl')
     ],[
-        InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+        InlineKeyboardButton('Support 🛠', url='https://t.me/LegendaRequest')
     ],[
         InlineKeyboardButton('Help ⚙', callback_data="help")
     ]]
